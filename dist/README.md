@@ -14,7 +14,7 @@
   ## INSTALLATION
   Download the code, download node.js, run the command npm init and npm install, then run the command node index to start the app.
   ## USAGE
-  https://drive.google.com/file/d/1J_jpHHECJammuvj1EjZ747_h-5lBNGjS/view
+  NA
   ## CONTRIBUTING
   Micah Moore
   ## LICENSE
@@ -23,3 +23,5 @@
   ## QUESTIONS
   GITHUB: https://github.com/micahmoore95
   EMAIL: mooreart95@gmail.com
+
+

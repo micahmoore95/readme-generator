@@ -71,7 +71,7 @@ const projectQuestions = () => {
               {
                 type: 'input',
                 name: 'usage',
-                message: 'Provide a screen share link to display the usage of the application (Required)',
+                message: 'Provide a screen share link to display the usage of the application or N/A if not applicable',
                 validate: usageInput => {
                   if (usageInput) {
                     return true;
@@ -119,7 +119,7 @@ const projectQuestions = () => {
 
 // TODO: Create a function to write README file
 const writeToFile = data => {
-    fs.writeFile('README.md', data, error => {
+    fs.writeFile('./dist/README.md', data, error => {
       if (error) {
         console.log(error);
         return; 
