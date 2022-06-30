@@ -41,7 +41,78 @@ const projectQuestions = () => {
                             console.log('Please enter your Github repo name.');
                         }
                     }
-                },
+            },
+            {
+                type: 'input',
+                name: 'info',
+                message: 'Enter important information about your project (Required)',
+                validate: infoInput => {
+                  if (infoInput) {
+                    return true;
+                  } else {
+                    console.log('Enter a description about your project');
+                    return false;
+                  }
+                }
+              },
+              {
+                type: 'input',
+                name: 'installation',
+                message: 'Enter the installation instructions to your project (Required)',
+                validate: installInput => {
+                  if (installInput) {
+                    return true;
+                  } else {
+                    console.log('Enter installation instructions for your project');
+                    return false;
+                  }
+                }
+              },
+              {
+                type: 'input',
+                name: 'usage',
+                message: 'Provide a screen share link to display the usage of the application (Required)',
+                validate: usageInput => {
+                  if (usageInput) {
+                    return true;
+                  } else {
+                    console.log('A valid link for the usage of the application is required');
+                    return false;
+                  }
+                }
+              },
+              {
+                type: 'input',
+                name: 'contribution',
+                message: 'Who contributed to the creation of the project? (Required)',
+                validate: contributeInput => {
+                  if (contributeInput) {
+                    return true;
+                  } else {
+                    console.log('List the contributors to the project');
+                    return false;
+                  }
+                }
+              },
+              {
+                type: 'input',
+                name: 'email',
+                message: 'What is your email address? (Required)',
+                validate: emailInput => { 
+                  if (emailInput) { 
+                    return true;
+                  } else {
+                    console.log('Please enter your email address.');
+                    return false;
+                  }
+                }
+              },
+              {
+                type: 'checkbox',
+                name: 'licensing',
+                message: 'Select the following licenses used for the project (Multiple options may be selected)',
+                choices: ['Apache', 'MIT', 'Mozilla-Public', 'GNU-General-Public', 'IBM', 'None']
+              }
     ])
 }
 
