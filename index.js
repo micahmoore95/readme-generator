@@ -124,7 +124,7 @@ const writeToFile = data => {
         console.log(error);
         return; 
       } else {
-        console.log("README had been generated successfully")
+        console.log("README has been generated successfully")
       }
     })
   };
