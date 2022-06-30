@@ -118,11 +118,22 @@ const projectQuestions = () => {
 
 
 // TODO: Create a function to write README file
-//function writeToFile(fileName, data) {}
+const writeToFile = data => {
+    fs.writeFile('README.md', data, error => {
+      if (error) {
+        console.log(error);
+        return; 
+      } else {
+        console.log("README had been generated successfully")
+      }
+    })
+  };
+  
+  
+  async function init() {
+    const feedback = await projectQuestions();
+    const markdown = generateMarkdown(feedback);
+    writeToFile(markdown);
+  };
 
-// TODO: Create a function to initialize app
-
-
-// Functioncall to initialize app
-
-projectQuestions();
+init();
